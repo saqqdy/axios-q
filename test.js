@@ -6,7 +6,9 @@ const axios = require('./')
 // }
 
 function $axios(options) {
-	const instance = axios.create()
+	options.onRequest = () => {}
+	options.onResponse = () => {}
+	const instance = axios.create(options)
 
 	// 添加一个请求拦截器
 	instance.interceptors.request.use(
@@ -37,4 +39,5 @@ function $axios(options) {
 		})
 }
 
-console.log($axios, axios.create())
+console.log(axios)
+// console.log($axios, axios.create())

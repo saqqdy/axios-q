@@ -1,8 +1,8 @@
 {
-	"name": "axios-queue",
+	"name": "axios-q",
 	"version": "1.0.0",
 	"description": "axios queue",
-	"main": "lib/axios-queue.js",
+	"main": "lib/axios-q.js",
 	"files": [
 		"lib"
 	],
@@ -37,22 +37,22 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/saqqdy/axios-queue.git"
+		"url": "git+https://github.com/saqqdy/axios-q.git"
 	},
 	"keywords": [
 		"axios",
 		"plugin",
 		"extension",
 		"Promise",
-		"axios-queue",
+		"axios-q",
 		"axios-plugin",
-		"axios-queueueue",
+		"axios-queue",
 		"saqqdy"
 	],
 	"author": "saqqdy@qq.com",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/saqqdy/axios-queue/issues"
+		"url": "https://github.com/saqqdy/axios-q/issues"
 	},
-	"homepage": "https://github.com/saqqdy/axios-queue#readme"
+	"homepage": "https://github.com/saqqdy/axios-q#readme"
 }

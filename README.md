@@ -32,6 +32,8 @@ $ yarn add axios-q
 
 ## Usage
 
+#### Global configuration
+
 ```js
 // {app_root}/src/plugins/axios.js
 import axiosQueue from 'axios-q'
@@ -41,11 +43,11 @@ export default options => {
         axiosQueue
             .create(options, {
                 // retry times
-                retry: 3, 
+                retry: 3,
                 // max connections
-                maxConnections: 10, 
+                maxConnections: 10,
                 // cancel request
-                unique: true, 
+                unique: true,
                 setHeaders(instance) {
                     instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
                 },
@@ -80,6 +82,23 @@ export default options => {
             })
     })
 }
+```
+
+#### Configure parameters for each request individually
+
+```js
+this.$axios({
+    url: '/path/of/api/url',
+    type: 'post',
+    unique: true,
+    onRequest(config) {
+        return config
+    },
+    onResponse(res) {
+        if (res.data.success) return res.data
+        return Promise.reject(res.data)
+    }
+}).then(res => {})
 ```
 
 ## Configuration

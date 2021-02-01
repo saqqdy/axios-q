@@ -38,47 +38,47 @@ import axiosQueue from 'axios-q'
 
 export default options => {
     return new Promise((resolve, reject) => {
-		axiosQueue
-			.create(options, {
+        axiosQueue
+            .create(options, {
                 // retry times
                 retry: 3, 
                 // max connections
                 maxConnections: 10, 
                 // cancel request
-				unique: true, 
-				setHeaders(instance) {
-					instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
-				},
-				// request
-				onRequest(config) {
-					// 
-					return config
-				},
-				// requestError
-				onRequestError(err) {
-					return Promise.reject(err)
-				},
-				// response
-				onResponse(res) {
-					if (res.data.success) return res.data
-					return Promise.reject(res.data)
-				},
-				// responseError
-				onResponseError(err) {
-					return Promise.reject(err)
-				},
-				// error
-				onError(err) {},
-				// canceled
-				onCancel(err) {}
-			})
-			.then(res => {
-				resolve(res)
-			})
-			.catch(err => {
-				reject(err)
-			})
-	})
+                unique: true, 
+                setHeaders(instance) {
+                    instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+                },
+                // request
+                onRequest(config) {
+                    // 
+                    return config
+                },
+                // requestError
+                onRequestError(err) {
+                    return Promise.reject(err)
+                },
+                // response
+                onResponse(res) {
+                    if (res.data.success) return res.data
+                    return Promise.reject(res.data)
+                },
+                // responseError
+                onResponseError(err) {
+                    return Promise.reject(err)
+                },
+                // error
+                onError(err) {},
+                // canceled
+                onCancel(err) {}
+            })
+            .then(res => {
+                resolve(res)
+            })
+            .catch(err => {
+                reject(err)
+            })
+    })
 }
 ```
 

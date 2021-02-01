@@ -2,7 +2,7 @@
 	"name": "axios-q",
 	"version": "1.0.0",
 	"description": "axios queue",
-	"main": "src/axios-q.js",
+	"main": "lib/index.js",
 	"files": [
 		"lib"
 	],

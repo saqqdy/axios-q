@@ -1,61 +1,63 @@
-'use strict'
+const axios = require('axios')
+const getRandomStr = require('js-cool/lib/getRandomStr')
 
-var utils = require('axios/lib/utils')
-var bind = require('axios/lib/helpers/bind')
-var Axios = require('axios/lib/core/Axios')
-var mergeConfig = require('axios/lib/core/mergeConfig')
-var defaults = require('axios/lib/defaults')
+const AxiosQueue = {
+	queue: {},
+	$axios: null,
+	create(options = {}, config = {}) {
+		const { retry = 0, interval = 2000, maxConnections = 10, unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = { ...config, ...options }
+		const promiseKey = getRandomStr(6) + '_' + Date.now()
+		const source = axios.CancelToken.source()
+		options.cancelToken = source.token
+		const promise = new Promise(async (resolve, reject) => {
+			const instance = axios.create()
+			let processing = []
 
-/**
- * Create an instance of Axios
- *
- * @param {Object} defaultConfig The default config for the instance
- * @return {Axios} A new instance of Axios
- */
-function createInstance(defaultConfig) {
-	var context = new Axios(defaultConfig)
-	var instance = bind(Axios.prototype.request, context)
+			// 设置请求头
+			setHeaders && setHeaders(instance)
+			// 添加一个请求拦截器
+			onRequest && instance.interceptors.request.use(onRequest, onRequestError)
+			// 添加一个响应拦截器
+			onResponse && instance.interceptors.response.use(onResponse, onResponseError)
 
-	// Copy axios.prototype to instance
-	utils.extend(instance, Axios.prototype, context)
+			// 需要等待的队列
+			for (let request of this.queue[options.url] || []) {
+				if (unique) {
+					request.source.cancel('本次请求被取消')
+				} else {
+					processing.push(request.promise)
+				}
+			}
+			if (processing.length > 0) await Promise.all(processing)
 
-	// Copy context to instance
-	utils.extend(instance, context)
-
-	return instance
+			// 执行
+			instance(options)
+				.then(res => {
+					// 成功回调
+					resolve(res)
+				})
+				.catch(err => {
+					if (axios.isCancel(err)) {
+						// 请求取消
+						onCancel && onCancel(err)
+					} else {
+						// 失败回调
+						reject(err)
+					}
+				})
+				.finally(() => {
+					let index = this.queue[options.url].findIndex(el => el.promiseKey === promiseKey)
+					index > -1 && this.queue[options.url].splice(index, 1)
+				})
+		})
+		if (!this.queue[options.url]) this.queue[options.url] = []
+		this.queue[options.url].push({
+			promiseKey,
+			promise,
+			source
+		})
+		return promise
+	}
 }
 
-// Create the default instance to be exported
-var axios = createInstance(defaults)
-
-// Expose Axios class to allow class inheritance
-axios.Axios = Axios
-
-// Factory for creating new instances
-axios.create = function create(instanceConfig) {
-	return createInstance(mergeConfig(axios.defaults, instanceConfig))
-}
-
-// Factory for creating new instances
-axios.createEx = function create(instanceConfig) {
-	return createInstance({ ...mergeConfig(axios.defaults, instanceConfig), maxConnect: 10, queueOptions: {} })
-}
-
-// Expose Cancel & CancelToken
-axios.Cancel = require('axios/lib/cancel/Cancel')
-axios.CancelToken = require('axios/lib/cancel/CancelToken')
-axios.isCancel = require('axios/lib/cancel/isCancel')
-
-// Expose all/spread
-axios.all = function all(promises) {
-	return Promise.all(promises)
-}
-axios.spread = require('axios/lib/helpers/spread')
-
-// Expose isAxiosError
-axios.isAxiosError = require('axios/lib/helpers/isAxiosError')
-
-module.exports = axios
-
-// Allow use of default import syntax in TypeScript
-module.exports.default = axios
+module.exports = AxiosQueue

@@ -20,4 +20,78 @@
 [download-image]: https://img.shields.io/npm/dm/axios-q.svg?style=flat-square
 [download-url]: https://npmjs.org/package/axios-q
 
-### 介绍
+## Install
+
+```bash
+# use npm
+$ npm i axios-q --save
+
+# use yarn
+$ yarn add axios-q
+```
+
+## Usage
+
+```js
+// {app_root}/src/plugins/axios.js
+import axiosQueue from 'axios-q'
+
+export default options => {
+    return new Promise((resolve, reject) => {
+		axiosQueue
+			.create(options, {
+                // retry times
+                retry: 3, 
+                // max connections
+                maxConnections: 10, 
+                // cancel request
+				unique: true, 
+				setHeaders(instance) {
+					instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+				},
+				// request
+				onRequest(config) {
+					// 
+					return config
+				},
+				// requestError
+				onRequestError(err) {
+					return Promise.reject(err)
+				},
+				// response
+				onResponse(res) {
+					if (res.data.success) return res.data
+					return Promise.reject(res.data)
+				},
+				// responseError
+				onResponseError(err) {
+					return Promise.reject(err)
+				},
+				// error
+				onError(err) {},
+				// canceled
+				onCancel(err) {}
+			})
+			.then(res => {
+				resolve(res)
+			})
+			.catch(err => {
+				reject(err)
+			})
+	})
+}
+```
+
+## Configuration
+
+```
+...
+```
+
+## Questions & Suggestions
+
+Please open an issue [here](https://github.com/saqqdy/axios-q/issues).
+
+## License
+
+[MIT](LICENSE)

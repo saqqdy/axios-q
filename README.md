@@ -57,18 +57,14 @@ export default options => {
                     return config
                 },
                 // requestError
-                onRequestError(err) {
-                    return Promise.reject(err)
-                },
+                onRequestError(err) {},
                 // response
                 onResponse(res) {
                     if (res.data.success) return res.data
                     return Promise.reject(res.data)
                 },
                 // responseError
-                onResponseError(err) {
-                    return Promise.reject(err)
-                },
+                onResponseError(err) {},
                 // error
                 onError(err) {},
                 // canceled

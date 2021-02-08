@@ -15,15 +15,26 @@ const AxiosQueue = {
 
 			// 设置请求头
 			setHeaders && setHeaders(instance)
+
 			// 添加一个请求拦截器
-			onRequest && instance.interceptors.request.use(onRequest, onRequestError)
+			onRequest &&
+				instance.interceptors.request.use(onRequest, err => {
+					onRequestError && onRequestError(err)
+					onError && onError(err)
+					return Promise.reject(err)
+				})
 			// 添加一个响应拦截器
-			onResponse && instance.interceptors.response.use(onResponse, onResponseError)
+			onResponse &&
+				instance.interceptors.response.use(onResponse, err => {
+					onResponseError && onResponseError(err)
+					onError && onError(err)
+					return Promise.reject(err)
+				})
 
 			// 需要等待的队列
 			for (let request of this.queue[options.url] || []) {
 				if (unique) {
-					request.source.cancel('本次请求被取消')
+					request.source.cancel('request canceled')
 				} else {
 					processing.push(request.promise)
 				}

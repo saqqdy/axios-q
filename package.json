@@ -18,7 +18,7 @@
 	"dependencies": {
 		"axios": "*",
 		"core-js": "^3.8.3",
-		"js-cool": "^1.0.3"
+		"js-cool": "^1.0.4"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.12.13",

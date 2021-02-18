@@ -53,7 +53,7 @@ export default options => {
                 },
                 // request
                 onRequest(config) {
-                    // 
+                    //
                     return config
                 },
                 // requestError

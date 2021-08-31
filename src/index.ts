@@ -1,11 +1,20 @@
-const axios = require('axios')
-const getRandomStr = require('js-cool/lib/getRandomStr')
+import axios, { AxiosRequestConfig, CancelTokenSource } from 'axios'
+import getRandomStr from 'js-cool/lib/getRandomStr'
+// import type { AnyObject } from '../typings/common'
 
-export interface AxiosQueueOptions extends Object {
-    cancelToken?: any
+export interface AxiosQueueType {
+    queue: {
+        [prop: string]: any
+    }
+    $axios: any
+    create(options: AxiosQueueOptions, config: AxiosQueueConfig): Promise<any>
 }
 
-export interface AxiosQueueConfig extends Object {
+export interface AxiosQueueOptions extends AxiosRequestConfig {
+    url: string
+}
+
+export interface AxiosQueueConfig extends AxiosRequestConfig {
     retry?: any
     interval?: any
     maxConnections?: any
@@ -19,13 +28,14 @@ export interface AxiosQueueConfig extends Object {
     onCancel?: any
 }
 
-const AxiosQueue = {
+const AxiosQueue: AxiosQueueType = {
     queue: {},
     $axios: null,
-    create(options: AxiosQueueOptions = {}, config: AxiosQueueConfig = {}) {
+    create(options: AxiosQueueOptions = { url: '' }, config: AxiosQueueConfig = {}) {
         const { retry = 0, interval = 2000, maxConnections = 10, unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = { ...config, ...options }
+        console.info(retry, interval, maxConnections)
         const promiseKey = getRandomStr(6) + '_' + Date.now()
-        const source = axios.CancelToken.source()
+        const source: CancelTokenSource = axios.CancelToken.source()
         options.cancelToken = source.token
         const promise = new Promise(async (resolve, reject) => {
             const instance = axios.create()
@@ -36,14 +46,14 @@ const AxiosQueue = {
 
             // 添加一个请求拦截器
             onRequest &&
-                instance.interceptors.request.use(onRequest, err => {
+                instance.interceptors.request.use(onRequest, (err: any) => {
                     onRequestError && onRequestError(err)
                     onError && onError(err)
                     return Promise.reject(err)
                 })
             // 添加一个响应拦截器
             onResponse &&
-                instance.interceptors.response.use(onResponse, err => {
+                instance.interceptors.response.use(onResponse, (err: any) => {
                     onResponseError && onResponseError(err)
                     onError && onError(err)
                     return Promise.reject(err)
@@ -62,7 +72,7 @@ const AxiosQueue = {
                 while (len > 0) {
                     try {
                         await processing[len]
-                    } catch (err) {
+                    } catch {
                         processing.splice(len, 1)
                     }
                     len--
@@ -71,11 +81,11 @@ const AxiosQueue = {
 
             // 执行
             instance(options)
-                .then(res => {
+                .then((res: any) => {
                     // 成功回调
                     resolve(res)
                 })
-                .catch(err => {
+                .catch((err: any) => {
                     if (axios.isCancel(err)) {
                         // 请求取消
                         onCancel && onCancel(err)
@@ -84,8 +94,8 @@ const AxiosQueue = {
                         reject(err)
                     }
                 })
-                .finally(res => {
-                    let index = this.queue[options.url].findIndex(el => el.promiseKey === promiseKey)
+                .finally(() => {
+                    let index = this.queue[options.url].findIndex((el: any) => el.promiseKey === promiseKey)
                     index > -1 && this.queue[options.url].splice(index, 1)
                 })
         })
@@ -99,4 +109,4 @@ const AxiosQueue = {
     }
 }
 
-module.exports = AxiosQueue
+export default AxiosQueue

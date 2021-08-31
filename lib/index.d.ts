@@ -1,8 +1,5 @@
 import { AxiosRequestConfig } from 'axios';
 
-declare const AxiosQueue: AxiosQueueType;
-export default AxiosQueue;
-
 export declare interface AxiosQueueConfig extends AxiosRequestConfig {
     retry?: any;
     interval?: any;
@@ -28,5 +25,8 @@ export declare interface AxiosQueueType {
     $axios: any;
     create(options: AxiosQueueOptions, config: AxiosQueueConfig): Promise<any>;
 }
+
+declare const _default: AxiosQueueType;
+export default _default;
 
 export { }

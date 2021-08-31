@@ -1,10 +1,28 @@
 const axios = require('axios')
 const getRandomStr = require('js-cool/lib/getRandomStr')
 
+export interface AxiosQueueOptions extends Object {
+    cancelToken?: any
+}
+
+export interface AxiosQueueConfig extends Object {
+    retry?: any
+    interval?: any
+    maxConnections?: any
+    unique?: any
+    setHeaders?: any
+    onRequest?: any
+    onRequestError?: any
+    onResponse?: any
+    onResponseError?: any
+    onError?: any
+    onCancel?: any
+}
+
 const AxiosQueue = {
     queue: {},
     $axios: null,
-    create(options = {}, config = {}) {
+    create(options: AxiosQueueOptions = {}, config: AxiosQueueConfig = {}) {
         const { retry = 0, interval = 2000, maxConnections = 10, unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = { ...config, ...options }
         const promiseKey = getRandomStr(6) + '_' + Date.now()
         const source = axios.CancelToken.source()

@@ -39,7 +39,17 @@ const AxiosQueue = {
                     processing.push(request.promise)
                 }
             }
-            if (processing.length > 0) await Promise.all(processing)
+            if (processing.length > 0) {
+                let len = processing.length
+                while (len > 0) {
+                    try {
+                        await processing[len]
+                    } catch (err) {
+                        processing.splice(len, 1)
+                    }
+                    len--
+                }
+            }
 
             // 执行
             instance(options)
@@ -56,7 +66,7 @@ const AxiosQueue = {
                         reject(err)
                     }
                 })
-                .finally(() => {
+                .finally(res => {
                     let index = this.queue[options.url].findIndex(el => el.promiseKey === promiseKey)
                     index > -1 && this.queue[options.url].splice(index, 1)
                 })

@@ -1,6 +1,6 @@
 {
     "name": "axios-q",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "axios queue",
     "main": "lib/index.js",
     "unpkg": "lib/index.js",
@@ -32,7 +32,7 @@
     "dependencies": {
         "axios": "*",
         "core-js": "^3.8.3",
-        "js-cool": "^1.0.4"
+        "js-cool": "^2.1.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.12.13",
@@ -41,8 +41,8 @@
         "@babel/plugin-transform-runtime": "^7.12.15",
         "@babel/preset-env": "^7.12.13",
         "@rollup/plugin-babel": "^5.2.2",
-        "@rollup/plugin-commonjs": "^17.0.0",
-        "@rollup/plugin-node-resolve": "^11.1.1",
+        "@rollup/plugin-commonjs": "^20.0.0",
+        "@rollup/plugin-node-resolve": "^13.0.4",
         "@saqqdy/prettier-config": "^1.0.3",
         "@typescript-eslint/eslint-plugin": "^4.29.3",
         "@typescript-eslint/parser": "^4.29.3",

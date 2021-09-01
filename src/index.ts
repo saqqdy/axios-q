@@ -1,7 +1,5 @@
 import axios, { AxiosRequestConfig, CancelTokenSource } from 'axios'
 import getRandomStr from 'js-cool/lib/getRandomStr'
-// import type { AnyObject } from '../typings/common'
-
 export interface AxiosQueueType {
     queue: {
         [prop: string]: any
@@ -12,6 +10,7 @@ export interface AxiosQueueType {
 
 export interface AxiosQueueOptions extends AxiosRequestConfig {
     url: string
+    [prop: string]: any
 }
 
 export interface AxiosQueueConfig extends AxiosRequestConfig {
@@ -38,8 +37,7 @@ function AxiosQueue() {
         queue: {},
         $axios: null,
         create(options: AxiosQueueOptions = { url: '' }, config: AxiosQueueConfig = {}) {
-            const { retry = 0, interval = 2000, maxConnections = 10, unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = { ...config, ...options }
-            console.info(retry, interval, maxConnections)
+            const { /* retry = 0, interval = 2000, maxConnections = 10,*/ unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = { ...config, ...options }
             const promiseKey = getRandomStr(6) + '_' + Date.now()
             const source: CancelTokenSource = axios.CancelToken.source()
             options.cancelToken = source.token

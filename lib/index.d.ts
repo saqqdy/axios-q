@@ -16,6 +16,7 @@ export declare interface AxiosQueueConfig extends AxiosRequestConfig {
 
 export declare interface AxiosQueueOptions extends AxiosRequestConfig {
     url: string;
+    [prop: string]: any;
 }
 
 export declare interface AxiosQueueType {

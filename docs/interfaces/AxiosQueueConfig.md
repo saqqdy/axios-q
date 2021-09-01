@@ -1,4 +1,4 @@
-[index.md - v1.0.3](../README.md) / [Exports](../modules.md) / AxiosQueueConfig
+[index.md - v1.1.0](../README.md) / [Exports](../modules.md) / AxiosQueueConfig
 
 # Interface: AxiosQueueConfig
 
@@ -190,7 +190,7 @@ node_modules/axios/index.d.ts:70
 
 #### Defined in
 
-[src/index.ts:19](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L19)
+[src/index.ts:18](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L18)
 
 ---
 
@@ -214,7 +214,7 @@ node_modules/axios/index.d.ts:66
 
 #### Defined in
 
-[src/index.ts:20](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L20)
+[src/index.ts:19](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L19)
 
 ---
 
@@ -266,7 +266,7 @@ node_modules/axios/index.d.ts:46
 
 #### Defined in
 
-[src/index.ts:28](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L28)
+[src/index.ts:27](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L27)
 
 ---
 
@@ -276,7 +276,7 @@ node_modules/axios/index.d.ts:46
 
 #### Defined in
 
-[src/index.ts:27](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L27)
+[src/index.ts:26](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L26)
 
 ---
 
@@ -286,7 +286,7 @@ node_modules/axios/index.d.ts:46
 
 #### Defined in
 
-[src/index.ts:23](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L23)
+[src/index.ts:22](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L22)
 
 ---
 
@@ -296,7 +296,7 @@ node_modules/axios/index.d.ts:46
 
 #### Defined in
 
-[src/index.ts:24](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L24)
+[src/index.ts:23](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L23)
 
 ---
 
@@ -306,7 +306,7 @@ node_modules/axios/index.d.ts:46
 
 #### Defined in
 
-[src/index.ts:25](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L25)
+[src/index.ts:24](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L24)
 
 ---
 
@@ -316,7 +316,7 @@ node_modules/axios/index.d.ts:46
 
 #### Defined in
 
-[src/index.ts:26](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L26)
+[src/index.ts:25](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L25)
 
 ---
 
@@ -368,7 +368,7 @@ node_modules/axios/index.d.ts:59
 
 #### Defined in
 
-[src/index.ts:18](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L18)
+[src/index.ts:17](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L17)
 
 ---
 
@@ -378,7 +378,7 @@ node_modules/axios/index.d.ts:59
 
 #### Defined in
 
-[src/index.ts:22](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L22)
+[src/index.ts:21](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L21)
 
 ---
 
@@ -458,7 +458,7 @@ node_modules/axios/index.d.ts:49
 
 #### Defined in
 
-[src/index.ts:21](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L21)
+[src/index.ts:20](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L20)
 
 ---
 

@@ -1,20 +1,20 @@
 {
 	"id": 0,
-	"name": "index.md - v1.0.3",
+	"name": "index.md - v1.1.0",
 	"kind": 0,
 	"kindString": "Project",
 	"flags": {},
 	"originalName": "index.md",
 	"children": [
 		{
-			"id": 50,
+			"id": 52,
 			"name": "AxiosQueueConfig",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {},
 			"children": [
 				{
-					"id": 76,
+					"id": 78,
 					"name": "adapter",
 					"kind": 1024,
 					"kindString": "Property",
@@ -39,7 +39,7 @@
 					}
 				},
 				{
-					"id": 77,
+					"id": 79,
 					"name": "auth",
 					"kind": 1024,
 					"kindString": "Property",
@@ -64,7 +64,7 @@
 					}
 				},
 				{
-					"id": 64,
+					"id": 66,
 					"name": "baseURL",
 					"kind": 1024,
 					"kindString": "Property",
@@ -89,7 +89,7 @@
 					}
 				},
 				{
-					"id": 98,
+					"id": 100,
 					"name": "cancelToken",
 					"kind": 1024,
 					"kindString": "Property",
@@ -114,7 +114,7 @@
 					}
 				},
 				{
-					"id": 72,
+					"id": 74,
 					"name": "data",
 					"kind": 1024,
 					"kindString": "Property",
@@ -139,7 +139,7 @@
 					}
 				},
 				{
-					"id": 99,
+					"id": 101,
 					"name": "decompress",
 					"kind": 1024,
 					"kindString": "Property",
@@ -164,7 +164,7 @@
 					}
 				},
 				{
-					"id": 67,
+					"id": 69,
 					"name": "headers",
 					"kind": 1024,
 					"kindString": "Property",
@@ -189,7 +189,7 @@
 					}
 				},
 				{
-					"id": 95,
+					"id": 97,
 					"name": "httpAgent",
 					"kind": 1024,
 					"kindString": "Property",
@@ -214,7 +214,7 @@
 					}
 				},
 				{
-					"id": 96,
+					"id": 98,
 					"name": "httpsAgent",
 					"kind": 1024,
 					"kindString": "Property",
@@ -239,7 +239,7 @@
 					}
 				},
 				{
-					"id": 52,
+					"id": 54,
 					"name": "interval",
 					"kind": 1024,
 					"kindString": "Property",
@@ -249,7 +249,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 19,
+							"line": 18,
 							"character": 4
 						}
 					],
@@ -259,7 +259,7 @@
 					}
 				},
 				{
-					"id": 92,
+					"id": 94,
 					"name": "maxBodyLength",
 					"kind": 1024,
 					"kindString": "Property",
@@ -284,7 +284,7 @@
 					}
 				},
 				{
-					"id": 53,
+					"id": 55,
 					"name": "maxConnections",
 					"kind": 1024,
 					"kindString": "Property",
@@ -294,7 +294,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 20,
+							"line": 19,
 							"character": 4
 						}
 					],
@@ -304,7 +304,7 @@
 					}
 				},
 				{
-					"id": 87,
+					"id": 89,
 					"name": "maxContentLength",
 					"kind": 1024,
 					"kindString": "Property",
@@ -329,7 +329,7 @@
 					}
 				},
 				{
-					"id": 93,
+					"id": 95,
 					"name": "maxRedirects",
 					"kind": 1024,
 					"kindString": "Property",
@@ -354,7 +354,7 @@
 					}
 				},
 				{
-					"id": 63,
+					"id": 65,
 					"name": "method",
 					"kind": 1024,
 					"kindString": "Property",
@@ -379,28 +379,8 @@
 					}
 				},
 				{
-					"id": 61,
+					"id": 63,
 					"name": "onCancel",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "src/index.ts",
-							"line": 28,
-							"character": 4
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				},
-				{
-					"id": 60,
-					"name": "onError",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
@@ -419,68 +399,8 @@
 					}
 				},
 				{
-					"id": 56,
-					"name": "onRequest",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "src/index.ts",
-							"line": 23,
-							"character": 4
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				},
-				{
-					"id": 57,
-					"name": "onRequestError",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "src/index.ts",
-							"line": 24,
-							"character": 4
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				},
-				{
-					"id": 58,
-					"name": "onResponse",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "src/index.ts",
-							"line": 25,
-							"character": 4
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				},
-				{
-					"id": 59,
-					"name": "onResponseError",
+					"id": 62,
+					"name": "onError",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
@@ -499,7 +419,87 @@
 					}
 				},
 				{
-					"id": 68,
+					"id": 58,
+					"name": "onRequest",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "src/index.ts",
+							"line": 22,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 59,
+					"name": "onRequestError",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "src/index.ts",
+							"line": 23,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 60,
+					"name": "onResponse",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "src/index.ts",
+							"line": 24,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 61,
+					"name": "onResponseError",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "src/index.ts",
+							"line": 25,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 70,
 					"name": "params",
 					"kind": 1024,
 					"kindString": "Property",
@@ -524,7 +524,7 @@
 					}
 				},
 				{
-					"id": 97,
+					"id": 99,
 					"name": "proxy",
 					"kind": 1024,
 					"kindString": "Property",
@@ -558,7 +558,7 @@
 					}
 				},
 				{
-					"id": 78,
+					"id": 80,
 					"name": "responseType",
 					"kind": 1024,
 					"kindString": "Property",
@@ -583,7 +583,7 @@
 					}
 				},
 				{
-					"id": 51,
+					"id": 53,
 					"name": "retry",
 					"kind": 1024,
 					"kindString": "Property",
@@ -593,7 +593,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 18,
+							"line": 17,
 							"character": 4
 						}
 					],
@@ -603,7 +603,7 @@
 					}
 				},
 				{
-					"id": 55,
+					"id": 57,
 					"name": "setHeaders",
 					"kind": 1024,
 					"kindString": "Property",
@@ -613,7 +613,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 22,
+							"line": 21,
 							"character": 4
 						}
 					],
@@ -623,7 +623,7 @@
 					}
 				},
 				{
-					"id": 94,
+					"id": 96,
 					"name": "socketPath",
 					"kind": 1024,
 					"kindString": "Property",
@@ -657,7 +657,7 @@
 					}
 				},
 				{
-					"id": 73,
+					"id": 75,
 					"name": "timeout",
 					"kind": 1024,
 					"kindString": "Property",
@@ -682,7 +682,7 @@
 					}
 				},
 				{
-					"id": 74,
+					"id": 76,
 					"name": "timeoutErrorMessage",
 					"kind": 1024,
 					"kindString": "Property",
@@ -707,7 +707,7 @@
 					}
 				},
 				{
-					"id": 65,
+					"id": 67,
 					"name": "transformRequest",
 					"kind": 1024,
 					"kindString": "Property",
@@ -744,7 +744,7 @@
 					}
 				},
 				{
-					"id": 66,
+					"id": 68,
 					"name": "transformResponse",
 					"kind": 1024,
 					"kindString": "Property",
@@ -781,7 +781,7 @@
 					}
 				},
 				{
-					"id": 54,
+					"id": 56,
 					"name": "unique",
 					"kind": 1024,
 					"kindString": "Property",
@@ -791,7 +791,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 21,
+							"line": 20,
 							"character": 4
 						}
 					],
@@ -801,7 +801,7 @@
 					}
 				},
 				{
-					"id": 62,
+					"id": 64,
 					"name": "url",
 					"kind": 1024,
 					"kindString": "Property",
@@ -826,7 +826,7 @@
 					}
 				},
 				{
-					"id": 88,
+					"id": 90,
 					"name": "validateStatus",
 					"kind": 1024,
 					"kindString": "Property",
@@ -851,21 +851,21 @@
 							{
 								"type": "reflection",
 								"declaration": {
-									"id": 89,
+									"id": 91,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 90,
+											"id": 92,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
 											"flags": {},
 											"parameters": [
 												{
-													"id": 91,
+													"id": 93,
 													"name": "status",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -892,7 +892,7 @@
 					}
 				},
 				{
-					"id": 75,
+					"id": 77,
 					"name": "withCredentials",
 					"kind": 1024,
 					"kindString": "Property",
@@ -917,7 +917,7 @@
 					}
 				},
 				{
-					"id": 79,
+					"id": 81,
 					"name": "xsrfCookieName",
 					"kind": 1024,
 					"kindString": "Property",
@@ -942,7 +942,7 @@
 					}
 				},
 				{
-					"id": 80,
+					"id": 82,
 					"name": "xsrfHeaderName",
 					"kind": 1024,
 					"kindString": "Property",
@@ -967,7 +967,7 @@
 					}
 				},
 				{
-					"id": 84,
+					"id": 86,
 					"name": "onDownloadProgress",
 					"kind": 2048,
 					"kindString": "Method",
@@ -984,7 +984,7 @@
 					],
 					"signatures": [
 						{
-							"id": 85,
+							"id": 87,
 							"name": "onDownloadProgress",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -993,7 +993,7 @@
 							},
 							"parameters": [
 								{
-									"id": 86,
+									"id": 88,
 									"name": "progressEvent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1022,7 +1022,7 @@
 					}
 				},
 				{
-					"id": 81,
+					"id": 83,
 					"name": "onUploadProgress",
 					"kind": 2048,
 					"kindString": "Method",
@@ -1039,7 +1039,7 @@
 					],
 					"signatures": [
 						{
-							"id": 82,
+							"id": 84,
 							"name": "onUploadProgress",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1048,7 +1048,7 @@
 							},
 							"parameters": [
 								{
-									"id": 83,
+									"id": 85,
 									"name": "progressEvent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1077,7 +1077,7 @@
 					}
 				},
 				{
-					"id": 69,
+					"id": 71,
 					"name": "paramsSerializer",
 					"kind": 2048,
 					"kindString": "Method",
@@ -1094,7 +1094,7 @@
 					],
 					"signatures": [
 						{
-							"id": 70,
+							"id": 72,
 							"name": "paramsSerializer",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1103,7 +1103,7 @@
 							},
 							"parameters": [
 								{
-									"id": 71,
+									"id": 73,
 									"name": "params",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1137,59 +1137,59 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						76,
-						77,
-						64,
+						78,
+						79,
+						66,
+						100,
+						74,
+						101,
+						69,
+						97,
 						98,
-						72,
-						99,
-						67,
+						54,
+						94,
+						55,
+						89,
 						95,
-						96,
-						52,
-						92,
-						53,
-						87,
-						93,
+						65,
 						63,
-						61,
-						60,
-						56,
-						57,
+						62,
 						58,
 						59,
-						68,
-						97,
-						78,
-						51,
-						55,
-						94,
-						73,
-						74,
-						65,
-						66,
-						54,
-						62,
-						88,
+						60,
+						61,
+						70,
+						99,
+						80,
+						53,
+						57,
+						96,
 						75,
-						79,
-						80
+						76,
+						67,
+						68,
+						56,
+						64,
+						90,
+						77,
+						81,
+						82
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						84,
-						81,
-						69
+						86,
+						83,
+						71
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "src/index.ts",
-					"line": 17,
+					"line": 16,
 					"character": 17
 				}
 			],
@@ -1783,7 +1783,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 14,
+							"line": 12,
 							"character": 4
 						}
 					],
@@ -2149,10 +2149,33 @@
 			"sources": [
 				{
 					"fileName": "src/index.ts",
-					"line": 13,
+					"line": 11,
 					"character": 17
 				}
 			],
+			"indexSignature": {
+				"id": 50,
+				"name": "__index",
+				"kind": 8192,
+				"kindString": "Index signature",
+				"flags": {},
+				"parameters": [
+					{
+						"id": 51,
+						"name": "prop",
+						"kind": 32768,
+						"flags": {},
+						"type": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				],
+				"type": {
+					"type": "intrinsic",
+					"name": "any"
+				}
+			},
 			"extendedTypes": [
 				{
 					"type": "reference",
@@ -2176,7 +2199,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 9,
+							"line": 7,
 							"character": 4
 						}
 					],
@@ -2194,7 +2217,7 @@
 					"sources": [
 						{
 							"fileName": "src/index.ts",
-							"line": 6,
+							"line": 4,
 							"character": 4
 						}
 					],
@@ -2266,7 +2289,7 @@
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 50,
+										"id": 52,
 										"name": "AxiosQueueConfig"
 									}
 								}
@@ -2305,13 +2328,13 @@
 			"sources": [
 				{
 					"fileName": "src/index.ts",
-					"line": 5,
+					"line": 3,
 					"character": 17
 				}
 			]
 		},
 		{
-			"id": 100,
+			"id": 102,
 			"name": "default",
 			"kind": 1024,
 			"kindString": "Property",
@@ -2328,7 +2351,7 @@
 			"title": "Interfaces",
 			"kind": 256,
 			"children": [
-				50,
+				52,
 				11,
 				1
 			]
@@ -2337,7 +2360,7 @@
 			"title": "Properties",
 			"kind": 1024,
 			"children": [
-				100
+				102
 			]
 		}
 	],

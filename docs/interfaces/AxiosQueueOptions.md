@@ -1,4 +1,4 @@
-[index.md - v1.0.3](../README.md) / [Exports](../modules.md) / AxiosQueueOptions
+[index.md - v1.1.0](../README.md) / [Exports](../modules.md) / AxiosQueueOptions
 
 # Interface: AxiosQueueOptions
 
@@ -7,6 +7,10 @@
 -   `AxiosRequestConfig`
 
     ↳ **`AxiosQueueOptions`**
+
+## Indexable
+
+▪ [prop: `string`]: `any`
 
 ## Table of contents
 
@@ -351,7 +355,7 @@ AxiosRequestConfig.url
 
 #### Defined in
 
-[src/index.ts:14](https://github.com/saqqdy/axios-q/blob/10a3fa9/src/index.ts#L14)
+[src/index.ts:12](https://github.com/saqqdy/axios-q/blob/9ddde01/src/index.ts#L12)
 
 ---
 

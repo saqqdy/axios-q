@@ -28,6 +28,11 @@ export interface AxiosQueueConfig extends AxiosRequestConfig {
     onCancel?: any
 }
 
+/**
+ * axios封装
+ *
+ * @return {*}
+ */
 function AxiosQueue() {
     return {
         queue: {},

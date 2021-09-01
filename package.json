@@ -23,11 +23,11 @@
         "patch-types": "node script/patchTypes",
         "roll-types": "api-extractor run && rimraf temp",
         "dev": "rollup -c -w",
-        "dist": "run-s eslint prettier build build:umd build:types",
+        "dist": "run-s eslint prettier build build:umd build:types docs prettier:docs",
         "docs": "rimraf docs && typedoc",
         "eslint": "eslint --fix --ext .ts,.js",
         "prettier": "prettier --write \"**/*.{js,ts,json,md}\"",
-        "prettier:docs": "prettier --write \"*.{md}\""
+        "prettier:docs": "prettier --write \"**/*.md\""
     },
     "dependencies": {
         "axios": "*",

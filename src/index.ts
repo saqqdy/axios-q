@@ -32,7 +32,7 @@ function AxiosQueue() {
         queue: {},
         $axios: null,
         create(options: AxiosRequestConfig = {}, config: AxiosQueueConfig = {}) {
-            const {/* retry = 0, interval = 2000, maxConnections = 10,*/  unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = config
+            const { /* retry = 0, interval = 2000, maxConnections = 10,*/ unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = config
             const promiseKey = getRandomStr(6) + '_' + Date.now()
             const source: CancelTokenSource = axios.CancelToken.source()
             options.cancelToken = source.token

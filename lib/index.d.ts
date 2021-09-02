@@ -1,22 +1,19 @@
+import { AxiosInstance } from 'axios';
 import { AxiosRequestConfig } from 'axios';
+import { AxiosResponse } from 'axios';
 
-export declare interface AxiosQueueConfig extends AxiosRequestConfig {
-    retry?: any;
-    interval?: any;
-    maxConnections?: any;
-    unique?: any;
-    setHeaders?: any;
-    onRequest?: any;
-    onRequestError?: any;
-    onResponse?: any;
-    onResponseError?: any;
-    onError?: any;
-    onCancel?: any;
-}
-
-export declare interface AxiosQueueOptions extends AxiosRequestConfig {
-    url: string;
-    [prop: string]: any;
+export declare interface AxiosQueueConfig {
+    retry?: number;
+    interval?: number;
+    maxConnections?: number;
+    unique?: boolean;
+    setHeaders?(instance: AxiosInstance): void;
+    onRequest?(config: AxiosRequestConfig): AxiosRequestConfig | Promise<AxiosRequestConfig>;
+    onRequestError?(error: any): void;
+    onResponse?(res: AxiosResponse<any>): AxiosResponse<any> | Promise<AxiosResponse<any>>;
+    onResponseError?(error: any): void;
+    onError?(error: any): void;
+    onCancel?(error: any): void;
 }
 
 export declare interface AxiosQueueType {
@@ -24,7 +21,7 @@ export declare interface AxiosQueueType {
         [prop: string]: any;
     };
     $axios: any;
-    create(options: AxiosQueueOptions, config: AxiosQueueConfig): Promise<any>;
+    create(options: AxiosRequestConfig, config: AxiosQueueConfig): Promise<any>;
 }
 
 declare const _default: AxiosQueueType;

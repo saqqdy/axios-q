@@ -1,4 +1,4 @@
-[index.md - v1.1.0](../README.md) / [Exports](../modules.md) / AxiosQueueConfig
+[index.md - v1.1.1](../README.md) / [Exports](../modules.md) / AxiosQueueConfig
 
 # Interface: AxiosQueueConfig
 
@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[index.ts:19](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L19)
+[index.ts:19](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L19)
 
 ---
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[index.ts:20](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L20)
+[index.ts:20](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L20)
 
 ---
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[index.ts:18](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L18)
+[index.ts:18](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L18)
 
 ---
 
@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[index.ts:21](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L21)
+[index.ts:21](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L21)
 
 ## Methods
 
@@ -79,7 +79,7 @@
 
 #### Defined in
 
-[index.ts:28](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L28)
+[index.ts:28](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L28)
 
 ---
 
@@ -99,7 +99,7 @@
 
 #### Defined in
 
-[index.ts:27](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L27)
+[index.ts:27](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L27)
 
 ---
 
@@ -119,7 +119,7 @@
 
 #### Defined in
 
-[index.ts:23](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L23)
+[index.ts:23](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L23)
 
 ---
 
@@ -139,7 +139,7 @@
 
 #### Defined in
 
-[index.ts:24](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L24)
+[index.ts:24](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L24)
 
 ---
 
@@ -159,7 +159,7 @@
 
 #### Defined in
 
-[index.ts:25](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L25)
+[index.ts:25](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L25)
 
 ---
 
@@ -179,7 +179,7 @@
 
 #### Defined in
 
-[index.ts:26](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L26)
+[index.ts:26](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L26)
 
 ---
 
@@ -199,4 +199,4 @@
 
 #### Defined in
 
-[index.ts:22](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L22)
+[index.ts:22](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L22)

@@ -11,39 +11,6 @@ const config = require('./config')
 const production = !process.env.ROLLUP_WATCH
 
 export default [
-    // {
-    //     input: 'src/index.ts',
-    //     output: {
-    //         name: 'AxiosQueue',
-    //         file: 'lib/index.umd.js',
-    //         format: 'umd'
-    //     },
-    //     plugins: [
-    //         resolve(), // so Rollup can find `ms`
-    //         commonjs(), // so Rollup can convert `ms` to an ES module
-    //         babel(
-    //             commonjs(),
-    //             typescript({
-    //                 tsconfigOverride: {
-    //                     include: ['src/**/*'],
-    //                     exclude: ['node_modules', '__tests__', 'core-js']
-    //                 },
-    //                 abortOnError: false
-    //             }),
-    //             babel({
-    //                 babelHelpers: 'bundled',
-    //                 extensions: config.extensions,
-    //                 // exclude: [/\/core-js\//],
-    //                 // runtimeHelpers: true,
-    //                 sourceMap: true
-    //             })
-    //         ),
-    //         production && terser()
-    //     ],
-    //     external(id) {
-    //         return ['core-js', 'axios', 'js-cool'].some(k => new RegExp('^' + k).test(id))
-    //     }
-    // },
     {
         input: 'src/index.ts',
         output: [

@@ -1,4 +1,4 @@
-[index.md - v1.1.0](../README.md) / [Exports](../modules.md) / AxiosQueueObject
+[index.md - v1.1.1](../README.md) / [Exports](../modules.md) / AxiosQueueObject
 
 # Interface: AxiosQueueObject
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[index.ts:6](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L6)
+[index.ts:6](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L6)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[index.ts:5](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L5)
+[index.ts:5](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L5)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[index.ts:7](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L7)
+[index.ts:7](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L7)

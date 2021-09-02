@@ -1,30 +1,25 @@
-import axios, { AxiosRequestConfig, CancelTokenSource } from 'axios'
+import axios, { AxiosRequestConfig, CancelTokenSource, AxiosInstance, AxiosResponse } from 'axios'
 import getRandomStr from 'js-cool/lib/getRandomStr'
 export interface AxiosQueueType {
     queue: {
         [prop: string]: any
     }
     $axios: any
-    create(options: AxiosQueueOptions, config: AxiosQueueConfig): Promise<any>
+    create(options: AxiosRequestConfig, config: AxiosQueueConfig): Promise<any>
 }
 
-export interface AxiosQueueOptions extends AxiosRequestConfig {
-    url: string
-    [prop: string]: any
-}
-
-export interface AxiosQueueConfig extends AxiosRequestConfig {
-    retry?: any
-    interval?: any
-    maxConnections?: any
-    unique?: any
-    setHeaders?: any
-    onRequest?: any
-    onRequestError?: any
-    onResponse?: any
-    onResponseError?: any
-    onError?: any
-    onCancel?: any
+export interface AxiosQueueConfig {
+    retry?: number
+    interval?: number
+    maxConnections?: number
+    unique?: boolean
+    setHeaders?(instance: AxiosInstance): void
+    onRequest?(config: AxiosRequestConfig): AxiosRequestConfig | Promise<AxiosRequestConfig>
+    onRequestError?(error: any): void
+    onResponse?(res: AxiosResponse<any>): AxiosResponse<any> | Promise<AxiosResponse<any>>
+    onResponseError?(error: any): void
+    onError?(error: any): void
+    onCancel?(error: any): void
 }
 
 /**
@@ -36,13 +31,13 @@ function AxiosQueue() {
     return {
         queue: {},
         $axios: null,
-        create(options: AxiosQueueOptions = { url: '' }, config: AxiosQueueConfig = {}) {
-            const { /* retry = 0, interval = 2000, maxConnections = 10,*/ unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = { ...config, ...options }
+        create(options: AxiosRequestConfig = {}, config: AxiosQueueConfig = {}) {
+            const {/* retry = 0, interval = 2000, maxConnections = 10,*/  unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = config
             const promiseKey = getRandomStr(6) + '_' + Date.now()
             const source: CancelTokenSource = axios.CancelToken.source()
             options.cancelToken = source.token
             const promise = new Promise(async (resolve, reject) => {
-                const instance = axios.create()
+                const instance: AxiosInstance = axios.create()
                 let processing = []
 
                 // 设置请求头
@@ -64,7 +59,7 @@ function AxiosQueue() {
                     })
 
                 // 需要等待的队列
-                for (let request of this.queue[options.url] || []) {
+                for (let request of this.queue[options.url || ''] || []) {
                     if (unique) {
                         request.source.cancel('request canceled')
                     } else {
@@ -99,12 +94,12 @@ function AxiosQueue() {
                         }
                     })
                     .finally(() => {
-                        let index = this.queue[options.url].findIndex((el: any) => el.promiseKey === promiseKey)
-                        index > -1 && this.queue[options.url].splice(index, 1)
+                        let index = this.queue[options.url || ''].findIndex((el: any) => el.promiseKey === promiseKey)
+                        index > -1 && this.queue[options.url || ''].splice(index, 1)
                     })
             })
-            if (!this.queue[options.url]) this.queue[options.url] = []
-            this.queue[options.url].push({
+            if (!this.queue[options.url || '']) this.queue[options.url || ''] = []
+            this.queue[options.url || ''].push({
                 promiseKey,
                 promise,
                 source

@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[index.ts:6](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L6)
+[src/index.ts:6](https://github.com/saqqdy/axios-q/blob/b7bb340/src/index.ts#L6)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[index.ts:5](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L5)
+[src/index.ts:5](https://github.com/saqqdy/axios-q/blob/b7bb340/src/index.ts#L5)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[index.ts:7](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L7)
+[src/index.ts:7](https://github.com/saqqdy/axios-q/blob/b7bb340/src/index.ts#L7)

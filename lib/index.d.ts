@@ -1,6 +1,7 @@
 import { AxiosInstance } from 'axios';
 import { AxiosRequestConfig } from 'axios';
 import { AxiosResponse } from 'axios';
+import { CancelTokenSource } from 'axios';
 
 export declare interface AxiosQueueConfig {
     retry?: number;
@@ -16,9 +17,15 @@ export declare interface AxiosQueueConfig {
     onCancel?(error: any): void;
 }
 
+export declare interface AxiosQueueObject {
+    promiseKey: string;
+    promise: Promise<any>;
+    source: CancelTokenSource;
+}
+
 export declare interface AxiosQueueType {
     queue: {
-        [prop: string]: any;
+        [prop: string]: Array<AxiosQueueObject>;
     };
     $axios: any;
     create(options: AxiosRequestConfig, config: AxiosQueueConfig): Promise<any>;

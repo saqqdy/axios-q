@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[index.ts:7](https://github.com/saqqdy/axios-q/blob/3cee2c6/src/index.ts#L7)
+[index.ts:13](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L13)
 
 ---
 
@@ -31,11 +31,11 @@
 
 #### Index signature
 
-▪ [prop: `string`]: `any`
+▪ [prop: `string`]: [`AxiosQueueObject`](AxiosQueueObject.md)[]
 
 #### Defined in
 
-[index.ts:4](https://github.com/saqqdy/axios-q/blob/3cee2c6/src/index.ts#L4)
+[index.ts:10](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L10)
 
 ## Methods
 
@@ -56,4 +56,4 @@
 
 #### Defined in
 
-[index.ts:8](https://github.com/saqqdy/axios-q/blob/3cee2c6/src/index.ts#L8)
+[index.ts:14](https://github.com/saqqdy/axios-q/blob/42fea8d/src/index.ts#L14)

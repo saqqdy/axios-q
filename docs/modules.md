@@ -7,6 +7,7 @@
 ### Interfaces
 
 -   [AxiosQueueConfig](interfaces/AxiosQueueConfig.md)
+-   [AxiosQueueObject](interfaces/AxiosQueueObject.md)
 -   [AxiosQueueType](interfaces/AxiosQueueType.md)
 
 ### Properties

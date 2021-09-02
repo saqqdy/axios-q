@@ -1,8 +1,14 @@
 import axios, { AxiosRequestConfig, CancelTokenSource, AxiosInstance, AxiosResponse } from 'axios'
 import getRandomStr from 'js-cool/lib/getRandomStr'
+
+export interface AxiosQueueObject {
+    promiseKey: string
+    promise: Promise<any>
+    source: CancelTokenSource
+}
 export interface AxiosQueueType {
     queue: {
-        [prop: string]: any
+        [prop: string]: Array<AxiosQueueObject>
     }
     $axios: any
     create(options: AxiosRequestConfig, config: AxiosQueueConfig): Promise<any>

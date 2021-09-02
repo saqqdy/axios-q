@@ -7,14 +7,14 @@
 	"originalName": "index.md",
 	"children": [
 		{
-			"id": 11,
+			"id": 15,
 			"name": "AxiosQueueConfig",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {},
 			"children": [
 				{
-					"id": 13,
+					"id": 17,
 					"name": "interval",
 					"kind": 1024,
 					"kindString": "Property",
@@ -24,7 +24,7 @@
 					"sources": [
 						{
 							"fileName": "index.ts",
-							"line": 13,
+							"line": 19,
 							"character": 4
 						}
 					],
@@ -34,7 +34,7 @@
 					}
 				},
 				{
-					"id": 14,
+					"id": 18,
 					"name": "maxConnections",
 					"kind": 1024,
 					"kindString": "Property",
@@ -44,7 +44,7 @@
 					"sources": [
 						{
 							"fileName": "index.ts",
-							"line": 14,
+							"line": 20,
 							"character": 4
 						}
 					],
@@ -54,7 +54,7 @@
 					}
 				},
 				{
-					"id": 12,
+					"id": 16,
 					"name": "retry",
 					"kind": 1024,
 					"kindString": "Property",
@@ -64,7 +64,7 @@
 					"sources": [
 						{
 							"fileName": "index.ts",
-							"line": 12,
+							"line": 18,
 							"character": 4
 						}
 					],
@@ -74,7 +74,7 @@
 					}
 				},
 				{
-					"id": 15,
+					"id": 19,
 					"name": "unique",
 					"kind": 1024,
 					"kindString": "Property",
@@ -84,7 +84,7 @@
 					"sources": [
 						{
 							"fileName": "index.ts",
-							"line": 15,
+							"line": 21,
 							"character": 4
 						}
 					],
@@ -94,7 +94,7 @@
 					}
 				},
 				{
-					"id": 34,
+					"id": 38,
 					"name": "onCancel",
 					"kind": 2048,
 					"kindString": "Method",
@@ -103,14 +103,14 @@
 					},
 					"signatures": [
 						{
-							"id": 35,
+							"id": 39,
 							"name": "onCancel",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 36,
+									"id": 40,
 									"name": "error",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -129,7 +129,7 @@
 					]
 				},
 				{
-					"id": 31,
+					"id": 35,
 					"name": "onError",
 					"kind": 2048,
 					"kindString": "Method",
@@ -138,14 +138,14 @@
 					},
 					"signatures": [
 						{
-							"id": 32,
+							"id": 36,
 							"name": "onError",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 33,
+									"id": 37,
 									"name": "error",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -164,7 +164,7 @@
 					]
 				},
 				{
-					"id": 19,
+					"id": 23,
 					"name": "onRequest",
 					"kind": 2048,
 					"kindString": "Method",
@@ -173,14 +173,14 @@
 					},
 					"signatures": [
 						{
-							"id": 20,
+							"id": 24,
 							"name": "onRequest",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 21,
+									"id": 25,
 									"name": "config",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -214,7 +214,7 @@
 					]
 				},
 				{
-					"id": 22,
+					"id": 26,
 					"name": "onRequestError",
 					"kind": 2048,
 					"kindString": "Method",
@@ -223,14 +223,14 @@
 					},
 					"signatures": [
 						{
-							"id": 23,
+							"id": 27,
 							"name": "onRequestError",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 24,
+									"id": 28,
 									"name": "error",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -249,7 +249,7 @@
 					]
 				},
 				{
-					"id": 25,
+					"id": 29,
 					"name": "onResponse",
 					"kind": 2048,
 					"kindString": "Method",
@@ -258,14 +258,14 @@
 					},
 					"signatures": [
 						{
-							"id": 26,
+							"id": 30,
 							"name": "onResponse",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 27,
+									"id": 31,
 									"name": "res",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -317,7 +317,7 @@
 					]
 				},
 				{
-					"id": 28,
+					"id": 32,
 					"name": "onResponseError",
 					"kind": 2048,
 					"kindString": "Method",
@@ -326,14 +326,14 @@
 					},
 					"signatures": [
 						{
-							"id": 29,
+							"id": 33,
 							"name": "onResponseError",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 30,
+									"id": 34,
 									"name": "error",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -352,7 +352,7 @@
 					]
 				},
 				{
-					"id": 16,
+					"id": 20,
 					"name": "setHeaders",
 					"kind": 2048,
 					"kindString": "Method",
@@ -361,14 +361,14 @@
 					},
 					"signatures": [
 						{
-							"id": 17,
+							"id": 21,
 							"name": "setHeaders",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 18,
+									"id": 22,
 									"name": "instance",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -392,44 +392,86 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						13,
-						14,
-						12,
-						15
+						17,
+						18,
+						16,
+						19
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						34,
-						31,
-						19,
-						22,
-						25,
-						28,
-						16
+						38,
+						35,
+						23,
+						26,
+						29,
+						32,
+						20
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "index.ts",
-					"line": 11,
+					"line": 17,
 					"character": 17
 				}
 			]
 		},
 		{
 			"id": 1,
-			"name": "AxiosQueueType",
+			"name": "AxiosQueueObject",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {},
 			"children": [
 				{
-					"id": 6,
-					"name": "$axios",
+					"id": 3,
+					"name": "promise",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 6,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "any"
+							}
+						],
+						"name": "Promise"
+					}
+				},
+				{
+					"id": 2,
+					"name": "promiseKey",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 5,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 4,
+					"name": "source",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
@@ -441,12 +483,57 @@
 						}
 					],
 					"type": {
+						"type": "reference",
+						"name": "CancelTokenSource"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						3,
+						2,
+						4
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 4,
+					"character": 17
+				}
+			]
+		},
+		{
+			"id": 5,
+			"name": "AxiosQueueType",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 10,
+					"name": "$axios",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 13,
+							"character": 4
+						}
+					],
+					"type": {
 						"type": "intrinsic",
 						"name": "any"
 					}
 				},
 				{
-					"id": 2,
+					"id": 6,
 					"name": "queue",
 					"kind": 1024,
 					"kindString": "Property",
@@ -454,27 +541,27 @@
 					"sources": [
 						{
 							"fileName": "index.ts",
-							"line": 4,
+							"line": 10,
 							"character": 4
 						}
 					],
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 3,
+							"id": 7,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"indexSignature": {
-								"id": 4,
+								"id": 8,
 								"name": "__index",
 								"kind": 8192,
 								"kindString": "Index signature",
 								"flags": {},
 								"parameters": [
 									{
-										"id": 5,
+										"id": 9,
 										"name": "prop",
 										"kind": 32768,
 										"flags": {},
@@ -485,29 +572,33 @@
 									}
 								],
 								"type": {
-									"type": "intrinsic",
-									"name": "any"
+									"type": "array",
+									"elementType": {
+										"type": "reference",
+										"id": 1,
+										"name": "AxiosQueueObject"
+									}
 								}
 							}
 						}
 					}
 				},
 				{
-					"id": 7,
+					"id": 11,
 					"name": "create",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 8,
+							"id": 12,
 							"name": "create",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 9,
+									"id": 13,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -518,14 +609,14 @@
 									}
 								},
 								{
-									"id": 10,
+									"id": 14,
 									"name": "config",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 11,
+										"id": 15,
 										"name": "AxiosQueueConfig"
 									}
 								}
@@ -549,35 +640,35 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						6,
-						2
+						10,
+						6
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						7
+						11
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "index.ts",
-					"line": 3,
+					"line": 9,
 					"character": 17
 				}
 			]
 		},
 		{
-			"id": 37,
+			"id": 41,
 			"name": "default",
 			"kind": 1024,
 			"kindString": "Property",
 			"flags": {},
 			"type": {
 				"type": "reference",
-				"id": 1,
+				"id": 5,
 				"name": "AxiosQueueType"
 			}
 		}
@@ -587,15 +678,16 @@
 			"title": "Interfaces",
 			"kind": 256,
 			"children": [
-				11,
-				1
+				15,
+				1,
+				5
 			]
 		},
 		{
 			"title": "Properties",
 			"kind": 1024,
 			"children": [
-				37
+				41
 			]
 		}
 	],

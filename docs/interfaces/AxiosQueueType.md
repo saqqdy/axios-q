@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[index.ts:13](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L13)
+[src/index.ts:17](https://github.com/saqqdy/axios-q/blob/b7bb340/src/index.ts#L17)
 
 ---
 
@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[index.ts:10](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L10)
+[src/index.ts:14](https://github.com/saqqdy/axios-q/blob/b7bb340/src/index.ts#L14)
 
 ## Methods
 
@@ -45,10 +45,10 @@
 
 #### Parameters
 
-| Name      | Type                                      |
-| :-------- | :---------------------------------------- |
-| `options` | `AxiosRequestConfig`                      |
-| `config`  | [`AxiosQueueConfig`](AxiosQueueConfig.md) |
+| Name      | Type                                        |
+| :-------- | :------------------------------------------ |
+| `options` | [`AxiosQueueOptions`](AxiosQueueOptions.md) |
+| `config`  | [`AxiosQueueConfig`](AxiosQueueConfig.md)   |
 
 #### Returns
 
@@ -56,4 +56,4 @@
 
 #### Defined in
 
-[index.ts:14](https://github.com/saqqdy/axios-q/blob/7b523ab/src/index.ts#L14)
+[src/index.ts:18](https://github.com/saqqdy/axios-q/blob/b7bb340/src/index.ts#L18)

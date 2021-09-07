@@ -6,12 +6,16 @@ export interface AxiosQueueObject {
     promise: Promise<any>
     source: CancelTokenSource
 }
+
+export interface AxiosQueueOptions extends AxiosRequestConfig {
+    [prop: string]: any
+}
 export interface AxiosQueueType {
     queue: {
         [prop: string]: Array<AxiosQueueObject>
     }
     $axios: any
-    create(options: AxiosRequestConfig, config: AxiosQueueConfig): Promise<any>
+    create(options: AxiosQueueOptions, config: AxiosQueueConfig): Promise<any>
 }
 
 export interface AxiosQueueConfig {
@@ -20,7 +24,7 @@ export interface AxiosQueueConfig {
     maxConnections?: number
     unique?: boolean
     setHeaders?(instance: AxiosInstance): void
-    onRequest?(config: AxiosRequestConfig): AxiosRequestConfig | Promise<AxiosRequestConfig>
+    onRequest?(config: AxiosQueueOptions): AxiosQueueOptions | Promise<AxiosQueueOptions>
     onRequestError?(error: any): void
     onResponse?(res: AxiosResponse<any>): AxiosResponse<any> | Promise<AxiosResponse<any>>
     onResponseError?(error: any): void

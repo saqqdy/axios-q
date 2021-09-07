@@ -1,4 +1,4 @@
-index.md - v1.1.1 / [Exports](modules.md)
+index.md - v1.1.2 / [Exports](modules.md)
 
 # axios-q
 
@@ -11,8 +11,8 @@ index.md - v1.1.1 / [Exports](modules.md)
 
 [npm-image]: https://img.shields.io/npm/v/axios-q.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/axios-q
-[travis-image]: https://travis-ci.org/saqqdy/axios-q.svg?branch=master
-[travis-url]: https://travis-ci.org/saqqdy/axios-q
+[travis-image]: https://travis-ci.com/saqqdy/axios-q.svg?branch=master
+[travis-url]: https://travis-ci.com/saqqdy/axios-q
 [codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/axios-q.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/saqqdy/axios-q?branch=master
 [david-image]: https://img.shields.io/david/saqqdy/axios-q.svg?style=flat-square

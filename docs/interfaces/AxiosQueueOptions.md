@@ -1,4 +1,4 @@
-[index.md - v1.1.1](../README.md) / [Exports](../modules.md) / AxiosQueueOptions
+[index.md - v1.1.2](../README.md) / [Exports](../modules.md) / AxiosQueueOptions
 
 # Interface: AxiosQueueOptions
 

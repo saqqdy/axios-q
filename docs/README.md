@@ -46,10 +46,6 @@ export default options => {
     return new Promise((resolve, reject) => {
         axiosQueue
             .create(options, {
-                // retry times
-                retry: 3,
-                // max connections
-                maxConnections: 10,
                 // cancel request
                 unique: true,
                 setHeaders(instance) {

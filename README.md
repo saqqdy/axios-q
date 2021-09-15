@@ -1,6 +1,7 @@
 # axios-q
 
 [![NPM version][npm-image]][npm-url]
+[![Codacy Badge][codacy-image]][codacy-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![David deps][david-image]][david-url]
@@ -11,6 +12,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/axios-q.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/axios-q
+[codacy-image]: https://app.codacy.com/project/badge/Grade/f70d4880e4ad4f40aa970eb9ee9d0696
+[codacy-url]: https://www.codacy.com/gh/saqqdy/axios-q/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=saqqdy/axios-q&amp;utm_campaign=Badge_Grade
 [travis-image]: https://travis-ci.com/saqqdy/axios-q.svg?branch=master
 [travis-url]: https://travis-ci.com/saqqdy/axios-q
 [codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/axios-q.svg?style=flat-square
@@ -26,7 +29,7 @@
 [license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license-url]: LICENSE
 
-# **完整文档请查阅： [API 完整文档](./docs/modules.md)**
+## **完整文档请查阅： [API 完整文档](./docs/modules.md)**
 
 ## Install
 
@@ -40,7 +43,7 @@ $ yarn add axios-q
 
 ## Usage
 
-#### Global configuration
+### Global configuration
 
 ```js
 // {app_root}/src/plugins/axios.js
@@ -86,8 +89,8 @@ export default options => {
 
 ## Configuration
 
-```
-...
+```js
+// ...
 ```
 
 ## Questions & Suggestions

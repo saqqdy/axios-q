@@ -1,6 +1,6 @@
-[index.md - v1.1.2](README.md) / Exports
+[index.md - v1.1.3](README.md) / Exports
 
-# index.md - v1.1.2
+# index.md - v1.1.3
 
 ## Table of contents
 

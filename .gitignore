@@ -9,7 +9,6 @@ yarn-error.log
 /test/e2e/reports/
 selenium-debug.log
 
-/lib
 *.bak
 *.bak.js
 *_bak

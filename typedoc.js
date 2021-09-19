@@ -5,8 +5,4 @@ module.exports = {
     name: 'index.md',
     includeVersion: true,
     readme: 'README.md'
-    // emit: true,
-    // exclude: '',
-    // externalPattern: '',
-    // excludeExternals: ''
 }

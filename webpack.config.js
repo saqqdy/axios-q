@@ -22,7 +22,10 @@ const baseConfig = {
     },
     resolve: {
         extensions: config.extensions,
-        alias: config.alias,
+        alias: {
+            '@': path.resolve(__dirname, '../src'),
+            postmessager: path.resolve(__dirname, './')
+        },
         modules: ['node_modules']
     },
     externals: config.externals,
@@ -48,7 +51,7 @@ module.exports = [
                 {
                     test: /\.(ts|js)x?$/,
                     include: process.cwd(),
-                    exclude: config.jsexclude,
+                    exclude: /node_modules/,
                     loader: 'babel-loader'
                 }
             ]
@@ -63,7 +66,7 @@ module.exports = [
     //             {
     //                 test: /\.(ts|js)x?$/,
     //                 include: process.cwd(),
-    //                 exclude: config.jsexclude,
+    //                 exclude: /node_modules/,
     //                 loader: 'babel-loader',
     //                 options: {
     //                     presets: [

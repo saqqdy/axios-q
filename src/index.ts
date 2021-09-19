@@ -48,7 +48,7 @@ function AxiosQueue() {
             options.cancelToken = source.token
             const promise = new Promise(async (resolve, reject) => {
                 const instance: AxiosInstance = axios.create()
-                let processing = []
+                const processing = []
 
                 // 设置请求头
                 setHeaders && setHeaders(instance)
@@ -69,7 +69,7 @@ function AxiosQueue() {
                     })
 
                 // 需要等待的队列
-                for (let request of this.queue[options.url || ''] || []) {
+                for (const request of this.queue[options.url || ''] || []) {
                     if (unique) {
                         request.source.cancel('request canceled')
                     } else {
@@ -104,7 +104,7 @@ function AxiosQueue() {
                         }
                     })
                     .finally(() => {
-                        let index = this.queue[options.url || ''].findIndex((el: any) => el.promiseKey === promiseKey)
+                        const index = this.queue[options.url || ''].findIndex((el: any) => el.promiseKey === promiseKey)
                         index > -1 && this.queue[options.url || ''].splice(index, 1)
                     })
             })

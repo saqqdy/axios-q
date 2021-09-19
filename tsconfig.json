@@ -12,6 +12,7 @@
         "strict": true,
         "declaration": true,
         "noImplicitOverride": true,
+        "resolveJsonModule": true,
         "noUnusedLocals": true,
         "esModuleInterop": true,
         "emitDecoratorMetadata": true,

@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/index.ts:23](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L23)
+[src/index.ts:23](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L23)
 
 ---
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[src/index.ts:24](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L24)
+[src/index.ts:24](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L24)
 
 ---
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[src/index.ts:22](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L22)
+[src/index.ts:22](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L22)
 
 ---
 
@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[src/index.ts:25](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L25)
+[src/index.ts:25](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L25)
 
 ## Methods
 
@@ -79,7 +79,7 @@
 
 #### Defined in
 
-[src/index.ts:32](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L32)
+[src/index.ts:32](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L32)
 
 ---
 
@@ -99,7 +99,7 @@
 
 #### Defined in
 
-[src/index.ts:31](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L31)
+[src/index.ts:31](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L31)
 
 ---
 
@@ -119,7 +119,7 @@
 
 #### Defined in
 
-[src/index.ts:27](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L27)
+[src/index.ts:27](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L27)
 
 ---
 
@@ -139,7 +139,7 @@
 
 #### Defined in
 
-[src/index.ts:28](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L28)
+[src/index.ts:28](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L28)
 
 ---
 
@@ -159,7 +159,7 @@
 
 #### Defined in
 
-[src/index.ts:29](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L29)
+[src/index.ts:29](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L29)
 
 ---
 
@@ -179,7 +179,7 @@
 
 #### Defined in
 
-[src/index.ts:30](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L30)
+[src/index.ts:30](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L30)
 
 ---
 
@@ -199,4 +199,4 @@
 
 #### Defined in
 
-[src/index.ts:26](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L26)
+[src/index.ts:26](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L26)

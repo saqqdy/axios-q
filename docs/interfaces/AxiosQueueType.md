@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/index.ts:17](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L17)
+[src/index.ts:17](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L17)
 
 ---
 
@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[src/index.ts:14](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L14)
+[src/index.ts:14](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L14)
 
 ## Methods
 
@@ -56,4 +56,4 @@
 
 #### Defined in
 
-[src/index.ts:18](https://github.com/saqqdy/axios-q/blob/734e451/src/index.ts#L18)
+[src/index.ts:18](https://github.com/saqqdy/axios-q/blob/f883c9e/src/index.ts#L18)

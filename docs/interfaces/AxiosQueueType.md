@@ -1,4 +1,4 @@
-[index.md - v1.1.3](../README.md) / [Exports](../modules.md) / AxiosQueueType
+[index.md - v1.1.4](../README.md) / [Exports](../modules.md) / AxiosQueueType
 
 # Interface: AxiosQueueType
 
@@ -6,7 +6,7 @@
 
 ### Properties
 
--   [$axios](AxiosQueueType.md#$axios)
+-   [%24axios](AxiosQueueType.md#$axios)
 -   [queue](AxiosQueueType.md#queue)
 
 ### Methods
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/index.ts:17](https://github.com/saqqdy/axios-q/blob/384e3b7/src/index.ts#L17)
+[src/index.ts:17](https://github.com/saqqdy/axios-q/blob/2bdbc88/src/index.ts#L17)
 
 ---
 
@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[src/index.ts:14](https://github.com/saqqdy/axios-q/blob/384e3b7/src/index.ts#L14)
+[src/index.ts:14](https://github.com/saqqdy/axios-q/blob/2bdbc88/src/index.ts#L14)
 
 ## Methods
 
@@ -56,4 +56,4 @@
 
 #### Defined in
 
-[src/index.ts:18](https://github.com/saqqdy/axios-q/blob/384e3b7/src/index.ts#L18)
+[src/index.ts:18](https://github.com/saqqdy/axios-q/blob/2bdbc88/src/index.ts#L18)

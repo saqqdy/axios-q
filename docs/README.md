@@ -1,4 +1,4 @@
-index.md - v1.1.3 / [Exports](modules.md)
+index.md - v1.1.4 / [Exports](modules.md)
 
 # axios-q
 

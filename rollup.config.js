@@ -6,7 +6,7 @@ import typescript from 'rollup-plugin-typescript2'
 import { visualizer } from 'rollup-plugin-visualizer'
 import pkg from './package.json'
 
-import config from './config.json'
+const config = require('./config')
 
 // const production = !process.env.ROLLUP_WATCH
 
@@ -17,12 +17,14 @@ export default [
             {
                 file: pkg.main,
                 exports: 'auto',
-                format: 'cjs'
+                format: 'cjs',
+                banner: config.banner
             },
             {
                 file: 'lib/index.esm.js',
                 exports: 'auto',
-                format: 'es'
+                format: 'es',
+                banner: config.banner
             }
         ],
         plugins: [
@@ -57,7 +59,6 @@ export default [
             }),
             visualizer()
         ],
-        // @ts-ignore
         external(id) {
             return ['core-js', 'axios', 'js-cool', 'regenerator-runtime'].some(k => new RegExp('^' + k).test(id))
         }

@@ -35,6 +35,8 @@
 
 ## **完整文档请查阅： [API 完整文档](./docs/modules.md)**
 
+## 推荐使用功能更全面的[axios-ex](https://github.com/saqqdy/axios-ex.git)，axios-q即将停止维护
+
 ## Install
 
 ```bash

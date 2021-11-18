@@ -1,4 +1,4 @@
-index.md - v1.1.4 / [Exports](modules.md)
+index.md - v1.1.5 / [Exports](modules.md)
 
 # axios-q
 
@@ -37,6 +37,8 @@ index.md - v1.1.4 / [Exports](modules.md)
 
 ## **完整文档请查阅： [API 完整文档](./docs/modules.md)**
 
+## 推荐使用功能更全面的[axios-ex](https://github.com/saqqdy/axios-ex.git)，axios-q 即将停止维护
+
 ## Install
 
 ```bash
@@ -62,7 +64,8 @@ export default options => {
                 // cancel request
                 unique: true,
                 setHeaders(instance) {
-                    instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+                    instance.defaults.headers.post['Content-Type'] =
+                        'application/x-www-form-urlencoded'
                 },
                 // request
                 onRequest(config) {

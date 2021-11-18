@@ -1,4 +1,4 @@
-[index.md - v1.1.4](../README.md) / [Exports](../modules.md) / AxiosQueueOptions
+[index.md - v1.1.5](../README.md) / [Exports](../modules.md) / AxiosQueueOptions
 
 # Interface: AxiosQueueOptions
 
@@ -25,6 +25,7 @@
 -   [headers](AxiosQueueOptions.md#headers)
 -   [httpAgent](AxiosQueueOptions.md#httpagent)
 -   [httpsAgent](AxiosQueueOptions.md#httpsagent)
+-   [insecureHTTPParser](AxiosQueueOptions.md#insecurehttpparser)
 -   [maxBodyLength](AxiosQueueOptions.md#maxbodylength)
 -   [maxContentLength](AxiosQueueOptions.md#maxcontentlength)
 -   [maxRedirects](AxiosQueueOptions.md#maxredirects)
@@ -32,6 +33,7 @@
 -   [params](AxiosQueueOptions.md#params)
 -   [proxy](AxiosQueueOptions.md#proxy)
 -   [responseType](AxiosQueueOptions.md#responsetype)
+-   [signal](AxiosQueueOptions.md#signal)
 -   [socketPath](AxiosQueueOptions.md#socketpath)
 -   [timeout](AxiosQueueOptions.md#timeout)
 -   [timeoutErrorMessage](AxiosQueueOptions.md#timeouterrormessage)
@@ -62,7 +64,7 @@ AxiosRequestConfig.adapter
 
 #### Defined in
 
-node_modules/axios/index.d.ts:63
+node_modules/axios/index.d.ts:75
 
 ---
 
@@ -76,7 +78,7 @@ AxiosRequestConfig.auth
 
 #### Defined in
 
-node_modules/axios/index.d.ts:64
+node_modules/axios/index.d.ts:76
 
 ---
 
@@ -90,7 +92,7 @@ AxiosRequestConfig.baseURL
 
 #### Defined in
 
-node_modules/axios/index.d.ts:53
+node_modules/axios/index.d.ts:65
 
 ---
 
@@ -104,7 +106,7 @@ AxiosRequestConfig.cancelToken
 
 #### Defined in
 
-node_modules/axios/index.d.ts:78
+node_modules/axios/index.d.ts:90
 
 ---
 
@@ -118,7 +120,7 @@ AxiosRequestConfig.data
 
 #### Defined in
 
-node_modules/axios/index.d.ts:59
+node_modules/axios/index.d.ts:71
 
 ---
 
@@ -132,13 +134,13 @@ AxiosRequestConfig.decompress
 
 #### Defined in
 
-node_modules/axios/index.d.ts:79
+node_modules/axios/index.d.ts:91
 
 ---
 
 ### headers
 
-• `Optional` **headers**: `any`
+• `Optional` **headers**: `AxiosRequestHeaders`
 
 #### Inherited from
 
@@ -146,7 +148,7 @@ AxiosRequestConfig.headers
 
 #### Defined in
 
-node_modules/axios/index.d.ts:56
+node_modules/axios/index.d.ts:68
 
 ---
 
@@ -160,7 +162,7 @@ AxiosRequestConfig.httpAgent
 
 #### Defined in
 
-node_modules/axios/index.d.ts:75
+node_modules/axios/index.d.ts:87
 
 ---
 
@@ -174,7 +176,21 @@ AxiosRequestConfig.httpsAgent
 
 #### Defined in
 
-node_modules/axios/index.d.ts:76
+node_modules/axios/index.d.ts:88
+
+---
+
+### insecureHTTPParser
+
+• `Optional` **insecureHTTPParser**: `boolean`
+
+#### Inherited from
+
+AxiosRequestConfig.insecureHTTPParser
+
+#### Defined in
+
+node_modules/axios/index.d.ts:94
 
 ---
 
@@ -188,7 +204,7 @@ AxiosRequestConfig.maxBodyLength
 
 #### Defined in
 
-node_modules/axios/index.d.ts:72
+node_modules/axios/index.d.ts:84
 
 ---
 
@@ -202,7 +218,7 @@ AxiosRequestConfig.maxContentLength
 
 #### Defined in
 
-node_modules/axios/index.d.ts:70
+node_modules/axios/index.d.ts:82
 
 ---
 
@@ -216,7 +232,7 @@ AxiosRequestConfig.maxRedirects
 
 #### Defined in
 
-node_modules/axios/index.d.ts:73
+node_modules/axios/index.d.ts:85
 
 ---
 
@@ -230,7 +246,7 @@ AxiosRequestConfig.method
 
 #### Defined in
 
-node_modules/axios/index.d.ts:52
+node_modules/axios/index.d.ts:64
 
 ---
 
@@ -244,7 +260,7 @@ AxiosRequestConfig.params
 
 #### Defined in
 
-node_modules/axios/index.d.ts:57
+node_modules/axios/index.d.ts:69
 
 ---
 
@@ -258,7 +274,7 @@ AxiosRequestConfig.proxy
 
 #### Defined in
 
-node_modules/axios/index.d.ts:77
+node_modules/axios/index.d.ts:89
 
 ---
 
@@ -272,7 +288,21 @@ AxiosRequestConfig.responseType
 
 #### Defined in
 
-node_modules/axios/index.d.ts:65
+node_modules/axios/index.d.ts:77
+
+---
+
+### signal
+
+• `Optional` **signal**: `AbortSignal`
+
+#### Inherited from
+
+AxiosRequestConfig.signal
+
+#### Defined in
+
+node_modules/axios/index.d.ts:93
 
 ---
 
@@ -286,7 +316,7 @@ AxiosRequestConfig.socketPath
 
 #### Defined in
 
-node_modules/axios/index.d.ts:74
+node_modules/axios/index.d.ts:86
 
 ---
 
@@ -300,7 +330,7 @@ AxiosRequestConfig.timeout
 
 #### Defined in
 
-node_modules/axios/index.d.ts:60
+node_modules/axios/index.d.ts:72
 
 ---
 
@@ -314,13 +344,13 @@ AxiosRequestConfig.timeoutErrorMessage
 
 #### Defined in
 
-node_modules/axios/index.d.ts:61
+node_modules/axios/index.d.ts:73
 
 ---
 
 ### transformRequest
 
-• `Optional` **transformRequest**: `AxiosTransformer` \| `AxiosTransformer`[]
+• `Optional` **transformRequest**: `AxiosRequestTransformer` \| `AxiosRequestTransformer`[]
 
 #### Inherited from
 
@@ -328,13 +358,13 @@ AxiosRequestConfig.transformRequest
 
 #### Defined in
 
-node_modules/axios/index.d.ts:54
+node_modules/axios/index.d.ts:66
 
 ---
 
 ### transformResponse
 
-• `Optional` **transformResponse**: `AxiosTransformer` \| `AxiosTransformer`[]
+• `Optional` **transformResponse**: `AxiosResponseTransformer` \| `AxiosResponseTransformer`[]
 
 #### Inherited from
 
@@ -342,7 +372,7 @@ AxiosRequestConfig.transformResponse
 
 #### Defined in
 
-node_modules/axios/index.d.ts:55
+node_modules/axios/index.d.ts:67
 
 ---
 
@@ -356,7 +386,7 @@ AxiosRequestConfig.transitional
 
 #### Defined in
 
-node_modules/axios/index.d.ts:80
+node_modules/axios/index.d.ts:92
 
 ---
 
@@ -370,7 +400,7 @@ AxiosRequestConfig.url
 
 #### Defined in
 
-node_modules/axios/index.d.ts:51
+node_modules/axios/index.d.ts:63
 
 ---
 
@@ -384,7 +414,7 @@ AxiosRequestConfig.validateStatus
 
 #### Defined in
 
-node_modules/axios/index.d.ts:71
+node_modules/axios/index.d.ts:83
 
 ---
 
@@ -398,7 +428,7 @@ AxiosRequestConfig.withCredentials
 
 #### Defined in
 
-node_modules/axios/index.d.ts:62
+node_modules/axios/index.d.ts:74
 
 ---
 
@@ -412,7 +442,7 @@ AxiosRequestConfig.xsrfCookieName
 
 #### Defined in
 
-node_modules/axios/index.d.ts:66
+node_modules/axios/index.d.ts:78
 
 ---
 
@@ -426,7 +456,7 @@ AxiosRequestConfig.xsrfHeaderName
 
 #### Defined in
 
-node_modules/axios/index.d.ts:67
+node_modules/axios/index.d.ts:79
 
 ## Methods
 
@@ -450,7 +480,7 @@ AxiosRequestConfig.onDownloadProgress
 
 #### Defined in
 
-node_modules/axios/index.d.ts:69
+node_modules/axios/index.d.ts:81
 
 ---
 
@@ -474,7 +504,7 @@ AxiosRequestConfig.onUploadProgress
 
 #### Defined in
 
-node_modules/axios/index.d.ts:68
+node_modules/axios/index.d.ts:80
 
 ---
 
@@ -498,4 +528,4 @@ AxiosRequestConfig.paramsSerializer
 
 #### Defined in
 
-node_modules/axios/index.d.ts:58
+node_modules/axios/index.d.ts:70

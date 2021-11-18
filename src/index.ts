@@ -1,4 +1,9 @@
-import axios, { AxiosRequestConfig, CancelTokenSource, AxiosInstance, AxiosResponse } from 'axios'
+import axios, {
+    AxiosRequestConfig,
+    CancelTokenSource,
+    AxiosInstance,
+    AxiosResponse
+} from 'axios'
 import getRandomStr from 'js-cool/lib/getRandomStr'
 
 export interface AxiosQueueObject {
@@ -24,9 +29,13 @@ export interface AxiosQueueConfig {
     maxConnections?: number
     unique?: boolean
     setHeaders?(instance: AxiosInstance): void
-    onRequest?(config: AxiosQueueOptions): AxiosQueueOptions | Promise<AxiosQueueOptions>
+    onRequest?(
+        config: AxiosQueueOptions
+    ): AxiosQueueOptions | Promise<AxiosQueueOptions>
     onRequestError?(error: any): void
-    onResponse?(res: AxiosResponse<any>): AxiosResponse<any> | Promise<AxiosResponse<any>>
+    onResponse?(
+        res: AxiosResponse<any>
+    ): AxiosResponse<any> | Promise<AxiosResponse<any>>
     onResponseError?(error: any): void
     onError?(error: any): void
     onCancel?(error: any): void
@@ -41,8 +50,20 @@ function AxiosQueue() {
     return {
         queue: {},
         $axios: null,
-        create(options: AxiosRequestConfig = {}, config: AxiosQueueConfig = {}) {
-            const { unique = false, setHeaders, onRequest, onRequestError, onResponse, onResponseError, onError, onCancel } = config
+        create(
+            options: AxiosRequestConfig = {},
+            config: AxiosQueueConfig = {}
+        ) {
+            const {
+                unique = false,
+                setHeaders,
+                onRequest,
+                onRequestError,
+                onResponse,
+                onResponseError,
+                onError,
+                onCancel
+            } = config
             const promiseKey = getRandomStr(6) + '_' + Date.now()
             const source: CancelTokenSource = axios.CancelToken.source()
             options.cancelToken = source.token
@@ -62,11 +83,14 @@ function AxiosQueue() {
                     })
                 // 添加一个响应拦截器
                 onResponse &&
-                    instance.interceptors.response.use(onResponse, (err: any) => {
-                        onResponseError && onResponseError(err)
-                        onError && onError(err)
-                        return Promise.reject(err)
-                    })
+                    instance.interceptors.response.use(
+                        onResponse,
+                        (err: any) => {
+                            onResponseError && onResponseError(err)
+                            onError && onError(err)
+                            return Promise.reject(err)
+                        }
+                    )
 
                 // 需要等待的队列
                 for (const request of this.queue[options.url || ''] || []) {
@@ -104,11 +128,15 @@ function AxiosQueue() {
                         }
                     })
                     .finally(() => {
-                        const index = this.queue[options.url || ''].findIndex((el: any) => el.promiseKey === promiseKey)
-                        index > -1 && this.queue[options.url || ''].splice(index, 1)
+                        const index = this.queue[options.url || ''].findIndex(
+                            (el: any) => el.promiseKey === promiseKey
+                        )
+                        index > -1 &&
+                            this.queue[options.url || ''].splice(index, 1)
                     })
             })
-            if (!this.queue[options.url || '']) this.queue[options.url || ''] = []
+            if (!this.queue[options.url || ''])
+                this.queue[options.url || ''] = []
             this.queue[options.url || ''].push({
                 promiseKey,
                 promise,
